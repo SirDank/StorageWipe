@@ -2,7 +2,7 @@ name: StorageWipe
 version: 2.0
 description: This plugin helps you empty Barrels, Chests, BlastFurnaces, Dispensers, Droppers, Furnaces, Hoppers from your chunk / world / server.
 authors: [aantonschouten, SirDankenstein]
-website: https://www.spigotmc.org/resources/chestreset.54962/
+website: https://www.spigotmc.org/resources/storagewipe.93195/
 
 main: me.StorageWipe.Main
 database: false
