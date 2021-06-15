@@ -7,21 +7,21 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
-  public static String prefix = "§6[§a§lStorageWipe§6] §a";
+  public static String prefix = "Â§6[Â§aÂ§lStorageWipeÂ§6] Â§a";
   
-  public static String perms = String.valueOf(prefix) + "§cYou don't have required permission.";
+  public static String perms = String.valueOf(prefix) + "Â§bâž¤ Â§cYou don't have required permission.";
   
   public static Plugin pl;
   
   public void onEnable() {
     pl = (Plugin)this;
     registerCommands();
-    Bukkit.getConsoleSender().sendMessage(String.valueOf(prefix) + "Plugin succesfully enabled.");
+    Bukkit.getConsoleSender().sendMessage(String.valueOf(prefix) + "Â§aPlugin succesfully enabled");
   }
   
   public void onDisable() {
     pl = null;
-    Bukkit.getConsoleSender().sendMessage(String.valueOf(prefix) + "Plugin succesfully disabled.");
+    Bukkit.getConsoleSender().sendMessage(String.valueOf(prefix) + "Â§cPlugin succesfully disabled");
   }
   
   public void registerCommands() {

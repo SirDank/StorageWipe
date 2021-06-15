@@ -17,38 +17,47 @@ public class CMD implements CommandExecutor {
       return true;
     } 
     if (args.length == 0) {
-      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 chunk §b[ §aClear storage of block in your current chunk. §b]");
-      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 world §b[ §aClear storage of block in your current world. §b]");
-      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 server §b[ §aClear storage of block in the server. §b]");
+      this.p.sendMessage("");
+      this.p.sendMessage(String.valueOf(Main.prefix) + "§aCommands:");
+      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 chunk");
+      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 world");
+      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 server");
       this.p.sendMessage("§b➤ §6Supported Blocks§b: §aBarrel§b, §aChest§b, §aBlastFurnace§b, §aDispenser§b, §aDropper§b, §aFurnace§b, §aHopper");
-      this.p.sendMessage("§6Plugin made by§b: §aantonschouten §b| §6Updated by§b: §aSirDankenstein");
+      this.p.sendMessage("§b➤ §6Author§b: §aantonschouten §b| §6Updated by§b: §aSirDankenstein");
+      this.p.sendMessage("");
       return true;
     } 
     else if ( !args[0].equalsIgnoreCase("Barrel") && !args[0].equalsIgnoreCase("Chest") && !args[0].equalsIgnoreCase("BlastFurnace") && !args[0].equalsIgnoreCase("Dispenser") && !args[0].equalsIgnoreCase("Dropper") && !args[0].equalsIgnoreCase("Furnace") && !args[0].equalsIgnoreCase("Hopper") ) {
-      this.p.sendMessage("§cBlock not supported§f!");
+      this.p.sendMessage("");
+      this.p.sendMessage(String.valueOf(Main.prefix) + "§cBlock not supported!");
+      this.p.sendMessage("§b➤ §6Supported Blocks§b: §aBarrel§b, §aChest§b, §aBlastFurnace§b, §aDispenser§b, §aDropper§b, §aFurnace§b, §aHopper");
+      this.p.sendMessage("");
       return true;
     }
     else if (args[1].equalsIgnoreCase("chunk")) {
         API.clearChunk(this.p, args[0]);
-        this.p.sendMessage(String.valueOf(Main.prefix) + "§6All §a" + args[0] + "s§6 in your current §achunk §6have been reset!");
+        this.p.sendMessage(String.valueOf(Main.prefix) + "§b➤ §6All §a" + args[0] + "s§6 in your current §achunk §6have been reset!");
         return true;
     } 
     else if (args[1].equalsIgnoreCase("world")) {
       API.clearWorld(this.p, args[0]);
-      this.p.sendMessage(String.valueOf(Main.prefix) + "§6All §a" + args[0] + "s§6 in world §b{ §a" + this.p.getWorld().getName() + "§b } §6 have been reset!");
+      this.p.sendMessage(String.valueOf(Main.prefix) + "§b➤ §6All §a" + args[0] + "s§6 in world §b{ §a" + this.p.getWorld().getName() + "§b } §6 have been reset!");
       return true;
     } 
     else if (args[1].equalsIgnoreCase("server")) {
       API.clearServer(this.p, args[0]);
-      this.p.sendMessage(String.valueOf(Main.prefix) + "§6All §a" + args[0] + "s§6 on the §aserver §6have been reset!");
+      this.p.sendMessage(String.valueOf(Main.prefix) + "§b➤ §6All §a" + args[0] + "s§6 on the §aserver §6have been reset!");
       return true;
     } 
     else {
-      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 chunk §b[ §aClear storage of block in your current chunk. §b]");
-      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 world §b[ §aClear storage of block in your current world. §b]");
-      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 server §b[ §aClear storage of block in the server. §b]");
+      this.p.sendMessage("");
+      this.p.sendMessage(String.valueOf(Main.prefix) + "§aCommands:");
+      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 chunk");
+      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 world");
+      this.p.sendMessage("§b➤ §6/storagewipe §f<blockname>§6 server");
       this.p.sendMessage("§b➤ §6Supported Blocks§b: §aBarrel§b, §aChest§b, §aBlastFurnace§b, §aDispenser§b, §aDropper§b, §aFurnace§b, §aHopper");
-      this.p.sendMessage("§6Plugin made by§b: §aantonschouten §b| §6Updated by§b: §aSirDankenstein");
+      this.p.sendMessage("§b➤ §6Author§b: §aantonschouten §b| §6Updated by§b: §aSirDankenstein");
+      this.p.sendMessage("");
       return true;
     }
   }
