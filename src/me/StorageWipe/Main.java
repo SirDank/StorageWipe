@@ -6,6 +6,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.stipess1.updater.Updater;
+
 public class Main extends JavaPlugin {
   public static String prefix = "§6[§a§lStorageWipe§6] §a";
   
@@ -17,6 +19,8 @@ public class Main extends JavaPlugin {
     pl = (Plugin)this;
     registerCommands();
     Bukkit.getConsoleSender().sendMessage(String.valueOf(prefix) + "§aPlugin succesfully enabled");
+    int ID = 93195;
+    Updater updater = new Updater(this, ID, this.getFile(), Updater.UpdateType.CHECK_DOWNLOAD, true);
   }
   
   public void onDisable() {
